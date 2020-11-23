@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Balloon</title>
+		<style>
+			#balloon {
+				height: 200px;
+				width: 200px;
+				position: absolute;
+				background: red;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div onclick="growballoon();" onmouseleave="shrinkballoon();" id="balloon"></div>
+	</body>
+	<script>
+		var balloon = document.getElementById("balloon");
+		var el = getComputedStyle(balloon);
+		var color = ["red", "green", "blue"];
+		var i = 0;
+		var clicked = false;
+		function growballoon()
+		{
+			i++;
+			clicked = true;
+			if (i > 2)
+				i = 0;
+			if (parseInt(el.width) < 420)
+			{
+				balloon.style.width = parseInt(el.width) + 10 + "px";
+				balloon.style.height = parseInt(el.height) + 10 + "px";
+				balloon.style.background = color[i];
+			}
+			else
+			{
+				balloon.style.width = 200 + "px";
+				balloon.style.height = 200 + "px";
+				balloon.style.background = color[i];
+			}
+		}
+		function shrinkballoon()
+		{
+			if (clicked == true)
+			{
+				clicked = false;
+				return ;
+			}
+			if (i == 3)
+				i--;
+			i--;
+			if (i < 0)
+				i = 2;
+			if (parseInt(el.width) > 200)
+			{
+				balloon.style.width = parseInt(el.width) - 5 + "px";
+				balloon.style.height = parseInt(el.height) - 5 + "px";
+				balloon.style.background = color[i];
+			}
+			else
+			{
+				balloon.style.width = 200 + "px";
+				balloon.style.height = 200 + "px";
+				balloon.style.background = color[i];
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>TO-DO</title>
+        <style>
+			body {
+				background-color: rgb(247, 201, 247);
+			}
+            #ft_list {
+                background-color: rgb(166, 250, 250);
+				width: 40%;
+				height: 90vh;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 5px;
+				color: rgb(219, 88, 213);
+				border: 2px solid rgb(34, 124, 105);
+				font-family: Comic Sans MS, cursive, sans-serif;
+            }
+			#new {
+				background-color: rgb(107, 233, 216);
+				margin: auto;
+				color: rgb(219, 88, 213);
+				font-family: Comic Sans MS, cursive, sans-serif;
+				width: 10%;
+				height: 5vh;
+				margin-left: 45%;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align: center; color: rgb(219, 88, 213); font-family: Comic Sans MS, cursive, sans-serif;">To-do list</h1>
+        <button name="New" id="new" type="button" onclick="addTask();">New</button> 
+		<div id="ft_list">
+		</div>
+        <script src="todo.js"></script>
+	</body>
+	</html>

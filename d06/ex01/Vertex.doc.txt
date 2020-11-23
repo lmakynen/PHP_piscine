@@ -1,0 +1,18 @@
+
+<- Vertex ----------------------------------------------------------------------
+A vertex (plural vertices) in computer graphics is a data structure that describes certain attributes, 
+like the position of a point in 2D or 3D space, or multiple points on a surface.
+
+ We represent a vertex according to five characteristics:
+• Its x axis coordinate
+• Its y axis coordinate
+• Its z depth coordinate
+• A new and disturbing coordinate w.
+• A color represented by an instance of the Color Class from the previous exercise.
+
+’x’: x axis coordinate, mandatory.
+’y’: y axis coordinate, mandatory.
+’z’: z axis coordinate, mandatory.
+’w’: optional, by default is worth 1.0.
+’color’: optional, by default is worth a new instance of the color white.
+---------------------------------------------------------------------- Vertex ->
